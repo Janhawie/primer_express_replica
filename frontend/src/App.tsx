@@ -1,24 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import SequenceInput from './components/SequenceInput';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Primer Express Replica</h1>
+        <p>A tool for DNA sequence analysis and primer design</p>
       </header>
+      <main className="App-main">
+        <SequenceInput />
+      </main>
+      <footer className="App-footer">
+        <p>© 2023 Primer Express Replica</p>
+      </footer>
     </div>
   );
 }
