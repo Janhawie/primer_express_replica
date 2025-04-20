@@ -1,46 +1,21 @@
 .sequence-input-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    @apply max-w-4xl mx-auto p-6;
 }
 
 h2 {
-    color: #333;
-    margin-bottom: 10px;
+    @apply text-2xl font-bold mb-4 text-gray-800;
 }
 
 .instruction {
-    color: #666;
-    margin-bottom: 20px;
+    @apply text-gray-600 mb-4;
 }
 
 .sequence-textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-family: monospace;
-    font-size: 14px;
-    resize: vertical;
-    margin-bottom: 15px;
+    @apply w-full p-3 border border-gray-300 rounded-lg mb-4 font-mono text-sm;
 }
 
 .submit-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s;
-}
-
-.submit-button:hover {
-    background-color: #45a049;
+    @apply bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed;
 }
 
 .submit-button:disabled {
@@ -49,33 +24,41 @@ h2 {
 }
 
 .error-message {
-    color: #d32f2f;
-    margin-top: 15px;
-    padding: 10px;
-    background-color: #ffebee;
-    border-radius: 4px;
+    @apply text-red-600 mt-4;
 }
 
-.sequence-display {
-    margin-top: 30px;
-    padding: 15px;
-    background-color: #e8f5e9;
-    border-radius: 4px;
+.results-container {
+    @apply mt-8 bg-white rounded-lg shadow-lg p-6;
 }
 
-.sequence-display h3 {
-    margin-top: 0;
-    color: #2e7d32;
+.primer-pair {
+    @apply mb-8 border-b border-gray-200 pb-6 last:border-b-0;
 }
 
-.sequence-display pre {
-    white-space: pre-wrap;
-    word-break: break-all;
-    font-family: monospace;
-    background-color: #ffffff;
-    padding: 10px;
-    border-radius: 4px;
-    border: 1px solid #c8e6c9;
-    max-height: 300px;
-    overflow-y: auto;
+.primer-pair h4 {
+    @apply text-xl font-semibold mb-4 text-gray-800;
+}
+
+.primer-details {
+    @apply grid grid-cols-1 md:grid-cols-3 gap-6;
+}
+
+.primer-details h5 {
+    @apply text-lg font-medium mb-2 text-gray-700;
+}
+
+.primer-details p {
+    @apply text-gray-600 mb-2;
+}
+
+.gc-plot {
+    @apply mt-8;
+}
+
+.gc-plot h4 {
+    @apply text-xl font-semibold mb-4 text-gray-800;
+}
+
+.gc-plot img {
+    @apply w-full max-w-2xl mx-auto rounded-lg shadow-md;
 }
